@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destinations - Travel Explorer</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Travel Agency - Destinations</title>
+    <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="logo">Travel Explorer</div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="destinations.html">Destinations</a></li>
                 <li><a href="hotels.html">Hotels</a></li>
                 <li><a href="tours.html">Tours</a></li>
@@ -21,37 +22,61 @@
         </nav>
     </header>
 
-    <section class="destinations">
-        <h2>Our Destinations</h2>
-        <div class="destination-grid">
-            <div class="destination-item">
-                <img src="destination1.jpg" alt="Beach Resort">
-                <h3>Beach Resort</h3>
-                <p>Relax at the serene beaches and luxurious resorts.</p>
-                <a href="destination-detail.html" class="btn">Learn More</a>
-            </div>
-            <div class="destination-item">
-                <img src="destination2.jpg" alt="Mountain Adventure">
-                <h3>Mountain Adventure</h3>
-                <p>Explore the rugged mountains and scenic trails.</p>
-                <a href="destination-detail.html" class="btn">Learn More</a>
-            </div>
-            <!-- Add more destinations as needed -->
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('images/hero-destinations.jpg');">
+        <div class="hero-content">
+            <h1>Explore Our Destinations</h1>
+            <p>Discover the best places to visit with our curated travel packages.</p>
+            <a href="contact.html" class="btn">Plan Your Trip</a>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Travel Explorer. All rights reserved.</p>
-        <ul class="footer-links">
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
-        </ul>
-        <div class="social-media">
-            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+    <!-- Popular Destinations -->
+    <section class="section popular-destinations">
+        <h2>Popular Destinations</h2>
+        <div class="card-grid">
+            <div class="card">
+                <img src="images/destination3.jpg" alt="Destination 3">
+                <div class="card-content">
+                    <h3>New York</h3>
+                    <p>The city that never sleeps.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/destination4.jpg" alt="Destination 4">
+                <div class="card-content">
+                    <h3>Tokyo</h3>
+                    <p>A blend of tradition and modernity.</p>
+                </div>
+            </div>
+            <!-- Add more destination cards as needed -->
         </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="home.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="hotels.html">Hotels</a>
+            <a href="tours.html">Tours</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><img src="images/facebook-icon.svg" alt="Facebook"></a>
+            <a href="#"><img src="images/twitter-icon.svg" alt="Twitter"></a>
+            <a href="#"><img src="images/instagram-icon.svg" alt="Instagram"></a>
+        </div>
+        <p>&copy; 2024 Travel Agency. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript for Sticky Header -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 50);
+        });
+    </script>
 </body>
 </html>
