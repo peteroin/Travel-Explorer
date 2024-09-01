@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Travel Explorer</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Travel Agency - About Us</title>
+    <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="logo">Travel Explorer</div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="destinations.html">Destinations</a></li>
                 <li><a href="hotels.html">Hotels</a></li>
                 <li><a href="tours.html">Tours</a></li>
@@ -21,43 +22,67 @@
         </nav>
     </header>
 
-    <section class="about">
-        <h2>About Us</h2>
-        <p>Welcome to Travel Explorer! We are dedicated to providing the best travel experiences.</p>
-        <h3>Our Team</h3>
-        <div class="team">
-            <div class="team-member">
-                <img src="team-member1.jpg" alt="Team Member 1">
-                <h4>Jane Doe</h4>
-                <p>Founder and CEO</p>
-            </div>
-            <div class="team-member">
-                <img src="team-member2.jpg" alt="Team Member 2">
-                <h4>John Smith</h4>
-                <p>Head of Operations</p>
-            </div>
-            <!-- Add more team members as needed -->
-        </div>
-        <h3>Our Partners</h3>
-        <div class="partners">
-            <img src="partner1.png" alt="Partner 1">
-            <img src="partner2.png" alt="Partner 2">
-            <!-- Add more partner logos as needed -->
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('images/hero-about.jpg');">
+        <div class="hero-content">
+            <h1>About Us</h1>
+            <p>Learn more about our mission and team.</p>
+            <a href="contact.html" class="btn">Contact Us</a>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Travel Explorer. All rights reserved.</p>
-        <ul class="footer-links">
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
-        </ul>
-        <div class="social-media">
-            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+    <!-- Our Story -->
+    <section class="section our-story">
+        <h2>Our Story</h2>
+        <p>We are a team of passionate travelers dedicated to making your travel dreams come true. With years of experience in the travel industry, we provide personalized services to ensure your trips are unforgettable.</p>
+    </section>
+
+    <!-- Meet the Team -->
+    <section class="section team">
+        <h2>Meet Our Team</h2>
+        <div class="card-grid">
+            <div class="card">
+                <img src="images/team1.jpg" alt="Team Member 1">
+                <div class="card-content">
+                    <h3>John Doe</h3>
+                    <p>Founder & CEO</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/team2.jpg" alt="Team Member 2">
+                <div class="card-content">
+                    <h3>Jane Smith</h3>
+                    <p>Travel Consultant</p>
+                </div>
+            </div>
+            <!-- Add more team member cards as needed -->
         </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="home.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="hotels.html">Hotels</a>
+            <a href="tours.html">Tours</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><img src="images/facebook-icon.svg" alt="Facebook"></a>
+            <a href="#"><img src="images/twitter-icon.svg" alt="Twitter"></a>
+            <a href="#"><img src="images/instagram-icon.svg" alt="Instagram"></a>
+        </div>
+        <p>&copy; 2024 Travel Agency. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript for Sticky Header -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 50);
+        });
+    </script>
 </body>
 </html>
