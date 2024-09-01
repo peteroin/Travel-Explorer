@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotels - Travel Explorer</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Travel Agency - Hotels</title>
+    <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="logo">Travel Explorer</div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="destinations.html">Destinations</a></li>
                 <li><a href="hotels.html">Hotels</a></li>
                 <li><a href="tours.html">Tours</a></li>
@@ -21,37 +22,61 @@
         </nav>
     </header>
 
-    <section class="hotels">
-        <h2>Our Hotels</h2>
-        <div class="hotel-list">
-            <div class="hotel-item">
-                <img src="hotel1.jpg" alt="Hotel 1">
-                <h3>Hotel Grand</h3>
-                <p>Luxurious stay with top-notch amenities.</p>
-                <a href="hotel-detail.html" class="btn">Book Now</a>
-            </div>
-            <div class="hotel-item">
-                <img src="hotel2.jpg" alt="Hotel 2">
-                <h3>Mountain Lodge</h3>
-                <p>Comfortable stay in the heart of the mountains.</p>
-                <a href="hotel-detail.html" class="btn">Book Now</a>
-            </div>
-            <!-- Add more hotels as needed -->
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('images/hero-hotels.jpg');">
+        <div class="hero-content">
+            <h1>Our Hotels</h1>
+            <p>Stay at the best hotels around the world.</p>
+            <a href="contact.html" class="btn">Book Now</a>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Travel Explorer. All rights reserved.</p>
-        <ul class="footer-links">
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
-        </ul>
-        <div class="social-media">
-            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+    <!-- Top Hotels -->
+    <section class="section top-hotels">
+        <h2>Top Hotels</h2>
+        <div class="card-grid">
+            <div class="card">
+                <img src="images/hotel1.jpg" alt="Hotel 1">
+                <div class="card-content">
+                    <h3>Hotel Lux</h3>
+                    <p>Experience luxury like never before.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/hotel2.jpg" alt="Hotel 2">
+                <div class="card-content">
+                    <h3>Sea View Resort</h3>
+                    <p>Enjoy stunning sea views and premium amenities.</p>
+                </div>
+            </div>
+            <!-- Add more hotel cards as needed -->
         </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="home.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="hotels.html">Hotels</a>
+            <a href="tours.html">Tours</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><img src="images/facebook-icon.svg" alt="Facebook"></a>
+            <a href="#"><img src="images/twitter-icon.svg" alt="Twitter"></a>
+            <a href="#"><img src="images/instagram-icon.svg" alt="Instagram"></a>
+        </div>
+        <p>&copy; 2024 Travel Agency. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript for Sticky Header -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 50);
+        });
+    </script>
 </body>
 </html>
