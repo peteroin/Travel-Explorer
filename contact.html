@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Travel Explorer</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Travel Agency - Contact</title>
+    <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="logo">Travel Explorer</div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="destinations.html">Destinations</a></li>
                 <li><a href="hotels.html">Hotels</a></li>
                 <li><a href="tours.html">Tours</a></li>
@@ -21,48 +22,66 @@
         </nav>
     </header>
 
-    <section class="contact">
-        <h2>Contact Us</h2>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-        <div class="contact-details">
-            <p>Email: contact@travelexplorer.com</p>
-            <p>Phone: +123 456 7890</p>
-            <p>Address: 123 Travel St, City, Country</p>
-            <div class="map">
-                <!-- Embed Google Map -->
-                <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-        <div class="social-media">
-            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('images/hero-contact.jpg');">
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            <p>We’d love to hear from you! Get in touch with our team to plan your next adventure.</p>
+            <a href="#contact-form" class="btn">Send a Message</a>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Travel Explorer. All rights reserved.</p>
-        <ul class="footer-links">
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
-        </ul>
-        <div class="social-media">
-            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+    <!-- Contact Form -->
+    <section class="section contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Subject" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section map">
+        <h2>Our Location</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!...your_map_embed_link..." allowfullscreen></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="home.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="hotels.html">Hotels</a>
+            <a href="tours.html">Tours</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
         </div>
+        <div class="social-icons">
+            <a href="#"><img src="images/facebook-icon.svg" alt="Facebook"></a>
+            <a href="#"><img src="images/twitter-icon.svg" alt="Twitter"></a>
+            <a href="#"><img src="images/instagram-icon.svg" alt="Instagram"></a>
+        </div>
+        <p>&copy; 2024 Travel Agency. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript for Sticky Header and Form -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 50);
+        });
+
+        // Contact Form Submission
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Implement form submission logic here (e.g., AJAX)
+            alert('Thank you for your message!');
+            contactForm.reset();
+        });
+    </script>
 </body>
 </html>
